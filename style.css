@@ -1,0 +1,80 @@
+@import url("https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Theme%20-%20Compressed.css");
+@import url("https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Mod%20-%20Hover%20Image%20Compressed.css");
+@import url("https://valeriolyndon.github.io/MAL-Public-List-Designs/Clarity%20Theme/Mod%20-%20Dark%20Mode%20Compressed.css");
+/* Am eliminat @import-ul de la malscraper (cel cu covers) pentru că este lent și instabil */
+
+body {
+  --avatar: url(https://i.postimg.cc/Df4X6mbN/Screenshot-20250521-222704-Instagram-2.png);
+  --name: "𝕰𝖉𝖔𝖔\a  -𝖘𝖆𝖒𝖆";
+  --character: none;
+  --banner: url(https://i.postimg.cc/6qWF9FR2/Screenshot-20250521-224909-Instagram-1.jpg);
+}
+
+.data.tags span {padding:0}
+.data.tags span a {margin:1px 0}
+.data.tags span a[href*="=Favorite"],
+.data.tags span a[href*="=Favourite"] {
+  position:absolute;
+  left:-34px;
+  top:calc(50% - 13px);
+  width:26px;
+  height:26px;
+  padding:0;
+  background:var(--bg);
+  border-radius:50%;
+  color:#ff65ad!important;
+  font-size:0!important;
+  line-height:23px;
+  overflow:hidden;
+  box-shadow:0 1px 2px rgba(0,0,0,.2)
+}
+.data.tags span a[href*="=Favorite"]:before,
+.data.tags span a[href*="=Favourite"]:before {
+  content:"♥";
+  font-size:26px
+}
+
+/* Banners pe categorii */
+[data-query*='status":7'] { --banner: url(https://bg-so-1.zippyimage.com/2025/05/23/cbe38023c25dc8b27434e725d762fdd0.gif); }
+[data-query*='status":1'] { --banner: url(https://bg-so-1.zippyimage.com/2025/05/21/a1fd836bd8a500d07a09c761fdaab2dd.jpg); }
+[data-query*='status":2'] { --banner: url(https://bg-so-1.zippyimage.com/2025/05/23/7d2700c6a1c8d33bb0db94b716a6615b.webp); }
+[data-query*='status":3'] { --banner: url(https://bg-so-1.zippyimage.com/2025/05/23/2312368161879bf34e01f154eae14420.jpg); }
+[data-query*='status":4'] { --banner: url(https://bg-so-1.zippyimage.com/2025/05/23/e7707486d5e8641f44229b69bbc49eef.gif); }
+[data-query*='status":6'] { --banner: url(https://bg-so-1.zippyimage.com/2025/05/23/78d8c81785c87ab9e571b08077802cb5.gif); }
+
+/* Scoruri explicative */
+.score-na::before { content:"Stil to be analyzed"; }
+.score-1::before { content:"Unredeemable"; }
+.score-2::before { content:"Horrid"; }
+.score-3::before { content:"Awful"; }
+.score-4::before { content:"Bad"; }
+.score-5::before { content:"Mediocre"; }
+.score-6::before { content:"BRUH"; }
+.score-7::before { content:"MEH"; }
+.score-8::before { content:"MIDDLIG"; }
+.score-9::before { content:"TASTY"; }
+.score-10::before { content:"PEAK"; }
+
+.score-label {
+  position:relative;
+  display:inline-block;
+  z-index:0;
+  transition:color 0.2s ease;
+}
+.score-label:hover { color:#fff!important; }
+.score-label::before {
+  position:absolute;
+  top:-4px;
+  left:-8px;
+  z-index:-1;
+  display:block;
+  padding:4px 8px 4px calc(100% + 12px);
+  background:#111;
+  border-radius:4px;
+  opacity:0;
+  transition:opacity 0.2s ease;
+  white-space:pre;
+  text-align:left;
+  pointer-events:none;
+}
+.score-label:hover::before { opacity:1; }
